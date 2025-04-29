@@ -1,12 +1,14 @@
-import React from "react";
-import { Home } from "./Pages/Home";
-import { ListTicket } from "./Pages/ListTicket";
+import { Home, ListTicket, NewTicket, Stock, Login } from "./Pages";
+import { Container } from "./styledApp";
 
 export const App = () => {
   return (
-    <>
-      <Home />;
-      <ListTicket />;
-    </>
+    <Container>
+      <Login />
+      <Home />
+      <ListTicket />
+      <NewTicket />
+      <Stock />
+    </Container>
   );
 };
