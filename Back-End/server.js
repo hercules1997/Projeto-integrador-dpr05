@@ -21,6 +21,7 @@ app.use(express.json());
 app.use(cors({ origin: 'https://sacadimax.netlify.app' }));
 
 app.use('/login', authRouter);
+app.use('/register', registerRouter);
 
 app.use(auth);
 
@@ -28,7 +29,6 @@ app.use('/tutors', tutorRouter);
 app.use('/gifts', giftRouter);
 app.use('/tickets', ticketRouter);
 app.use('/history', historyRouter);
-app.use('/register', registerRouter);
 
 // Executa a cada 10 minutos (você pode mudar para "0 0 * * *" para rodar 1x por dia)
 cron.schedule('*/02 * * * *', async () => {
