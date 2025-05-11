@@ -1,26 +1,40 @@
 {
-  "name": "back-end",
+  "name": "nova-pasta",
   "version": "1.0.0",
-  "type": "commonjs",
-  "main": "src/server.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sucrase ./src -d ./dist --transforms imports",
-    "dev": "nodemon"
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "axios": "^1.8.4",
-    "back-end": "file:",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "env": "^0.0.2",
     "express": "^4.21.2",
-    "nodemon": "^3.1.9"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.1",
+    "node-cron": "^3.0.3",
+    "nova-pasta": "file:",
+    "uuid": "^11.1.0",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
-    "sucrase": "^3.35.0"
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.5",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3"
   }
 }

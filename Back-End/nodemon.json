@@ -1,5 +1,6 @@
 {
-    "execMap": {
-        "js": "node -r sucrase/register"
-    }
+  "watch": ["server.js", "routes/", "controllers/", "models/", "config/"],
+  "ext": "js json",
+  "ignore": ["node_modules/"],
+  "exec": "node server.js"
 }
