@@ -18,7 +18,21 @@ connectDB();
 const app = express();
 app.use(express.json());
 
-app.use(cors({ origin: 'https://sacadimax.netlify.app' }));
+const allowedOrigins = [
+  'https://sacadimax.netlify.app',
+  'https://front-end-sac-adimax.vercel.app',
+  'http://localhost:3000'
+];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
 app.use('/login', authRouter);
 app.use('/register', registerRouter);
