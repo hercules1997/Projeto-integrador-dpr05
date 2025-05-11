@@ -1,9 +1,9 @@
-
-
 export const paths = {
-    Home: "/",
-    Stock: "/stock",
-    NewItem: "/new-Item",
-    NewTicket: "/new-Ticket",
-    ListTicket: "/list-ticket"
-}
+  Deshboard: "/deshboard",
+  Login: "/login",
+  Stock: "/stock",
+  NewItem: "/newItem",
+  History: "/history",
+  NewTicket: "/newticket",
+  ListTicket: "/listticket",
+};
