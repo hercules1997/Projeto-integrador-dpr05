@@ -1,6 +1,6 @@
 export const paths = {
   Deshboard: "/deshboard",
-  Login: "/login",
+  Login: "/",
   Stock: "/stock",
   NewItem: "/newItem",
   History: "/history",

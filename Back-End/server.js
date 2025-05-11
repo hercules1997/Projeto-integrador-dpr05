@@ -18,8 +18,7 @@ connectDB();
 const app = express();
 app.use(express.json());
 
-//TODO ESQUECER DE ALTERARE
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ origin: 'https://sacadimax.netlify.app' }));
 
 app.use('/login', authRouter);
 

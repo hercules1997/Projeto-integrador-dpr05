@@ -1,6 +1,6 @@
 import CreditScoreIcon from "@mui/icons-material/CreditScore";
 import InventoryIcon from "@mui/icons-material/Inventory";
-import { paths } from "../../Constants/index";
+import { paths } from "../../constants";
 import PieChartIcon from "@mui/icons-material/PieChart";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import HistoryIcon from "@mui/icons-material/History";
