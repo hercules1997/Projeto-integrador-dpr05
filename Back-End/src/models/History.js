@@ -7,6 +7,7 @@ const HistorySchema = new mongoose.Schema({
     required: true,
   },
   tracking_code: String,
+  quantity: Number,
   packageBox: {
     size: String,
     quantity: Number,

@@ -23,8 +23,9 @@ const createHistory = async (req, res) => {
     const history = new History({
       ticket_id: ticket._id,
       tracking_code: ticket.tracking_code,
+      quantity: ticket.quantity,
       packageBox: ticket.packageBox,
-      tutor: tutor.toObject(), // conversão essencial
+      tutor: tutor.toObject(), 
       gift: gift._id,
     });
 

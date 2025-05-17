@@ -38,6 +38,7 @@ const createTicket = async (req, res) => {
     const newTicket = new CreateTicket({
       protocol_Id,
       gift_id,
+       quantity,
       packageBox,
       tracking_code: `BRL${Date.now()}`,
     });
@@ -103,6 +104,7 @@ const getTickets = async (req, res) => {
         return {
           _id: ticket._id,
           tracking_code: ticket.tracking_code,
+           quantity: ticket.quantity,
           packageBox: ticket.packageBox,
           tutor: tutor || null,
           gift: gift || null,
@@ -139,6 +141,7 @@ const getTicketById = async (req, res) => {
     res.status(200).json({
       _id: ticket._id,
       tracking_code: ticket.tracking_code,
+          quantity: ticket.quantity,
       packageBox: ticket.packageBox,
       tutor: tutor || null,
       gift: gift || null,
@@ -171,6 +174,7 @@ const updateTicketById = async (req, res) => {
     res.status(200).json({
       _id: updated._id,
       tracking_code: updated.tracking_code,
+      quantity: updated.quantity,
       packageBox: updated.packageBox,
       tutor: tutor || null,
       gift: gift || null,
