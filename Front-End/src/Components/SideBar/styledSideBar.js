@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { colorsTheme } from "../../Styles/globalStyles";
 import { LogoutOutlined } from "@mui/icons-material";
+
+
 export const ContainerMenu = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,13 +11,32 @@ export const ContainerMenu = styled.div`
   padding: 40px 20px 50px 15px;
   background-color: ${colorsTheme.background};
   box-shadow: 0px 0px 10px #000;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+  }
 `;
+
 
 export const ContainerItems = styled.div`
   margin-top: 10px;
-  height: 20px;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    margin: 0;
+    height: auto;
+  }
 `;
+
 
 export const ContainerLogout = styled.button`
   display: flex;
@@ -23,15 +44,16 @@ export const ContainerLogout = styled.button`
   position: absolute;
   bottom: 20px;
   width: 40%;
-  color: black;
   background: transparent;
   border: none;
-  padding-right: 25px;
   font-size: 17px;
   cursor: pointer;
 
-  .iconLogout {
+  @media (max-width: 768px) {
+    display: none;
+  }
 
+  .iconLogout {
     width: 100%;
     &:hover {
       color: ${colorsTheme.light};
@@ -54,7 +76,7 @@ export const ListLink = styled(Link)`
   align-items: center;
   justify-content: space-between;
   padding: 5px 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-top-left-radius: 0px;
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -73,7 +95,14 @@ export const ListLink = styled(Link)`
     background-color: ${colorsTheme.hover};
     box-shadow: none;
   }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    flex-direction: column;
+    padding: 2px 4px;
+  }
 `;
+
 export const ExitButtom = styled(Link)`
   text-decoration: none;
   display: flex;

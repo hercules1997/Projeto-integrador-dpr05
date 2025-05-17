@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
   Container,
-  Navbar,
   Table,
   Th,
   Td,
@@ -15,7 +14,7 @@ import {
 } from "./styledListTicket";
 import { Pagination } from "../../Components/Pagination";
 import apiConnection from "../../Services/apiConnection";
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
 import { Loading } from "../../Components";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { DetailsList } from "../../Components/DetailsList";
@@ -52,7 +51,6 @@ export const ListTicket = () => {
     loadData();
   }, [refresh]);
 
-
   const filteredTickets = debouncedSearch
     ? tickets.filter((item) => {
         const tutorName = item.tutor?.name?.toLowerCase() || "";
@@ -65,7 +63,6 @@ export const ListTicket = () => {
     (page - 1) * ITEMS_PER_PAGE,
     page * ITEMS_PER_PAGE
   );
-
 
   const handleDetails = (ticket) => {
     setSelectedTicket(ticket);
@@ -108,7 +105,7 @@ export const ListTicket = () => {
 
   return (
     <Wrapper>
-      <Navbar>
+      <Container>
         <SearchInput
           type="text"
           placeholder="Buscar por nome do tutor"
@@ -118,9 +115,6 @@ export const ListTicket = () => {
             setPage(1);
           }}
         />
-      </Navbar>
-
-      <Container>
         {selectedTicket && (
           <ModalOverlay onClick={handleCloseModal}>
             <ModalContent onClick={(e) => e.stopPropagation()}>

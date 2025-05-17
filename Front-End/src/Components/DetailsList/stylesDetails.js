@@ -8,6 +8,7 @@ export const Wapper = styled.div`
   gap: 0.5rem;
   justify-content: space-around;
   flex-wrap: wrap;
+
   div {
     flex: 1;
     display: flex;
@@ -18,5 +19,13 @@ export const Wapper = styled.div`
 
   span {
     justify-content: flex-start;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    div {
+      min-width: 100%;
+      font-size: 1.2rem;
+    }
   }
 `;

@@ -10,7 +10,7 @@ import {
 
 import { Ticket, Stock, ListTicket, History, StockCharts } from "../index";
 
-import { paths } from "../../constants";
+import { paths } from "../../constants/paths.js";
 import { SideBar } from "../../Components";
 
 function AppNav({ path }) {

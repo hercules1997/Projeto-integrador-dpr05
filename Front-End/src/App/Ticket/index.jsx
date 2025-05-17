@@ -15,7 +15,7 @@ import {
 } from "./styledTicket";
 
 import { useNavigate } from "react-router-dom";
-import { paths } from "../../constants";
+import { paths } from "../../constants/paths.js";
 import { motion, AnimatePresence } from "framer-motion";
 import { ProgressBar } from "../../Components/ProcessBar";
 import { Loading } from "../../Components";
@@ -35,6 +35,7 @@ export const Ticket = () => {
   const [tutors, setTutors] = useState([]);
   const [formData, setFormData] = useState({});
   const [gifts, setGifts] = useState([]);
+  const [valor, setValor] = useState();
 
   const nextStep = () => setStep((prev) => prev + 1);
   const backStep = () => setStep((prev) => prev - 1);
@@ -122,9 +123,18 @@ export const Ticket = () => {
                     <Label flex="2">
                       n° do Ticket
                       <Input
-                        type="number"
+                        type="text"
                         {...register("protocol_Id")}
-                        required
+                        inputMode="numeric"
+                        pattern="\d*"
+                        value={valor}
+                        onChange={(e) => {
+                          const value = e.target.value;
+                          if (/^\d{0,6}$/.test(value)) {
+                            setValor(value);
+                          }
+                        }}
+               
                       />
                     </Label>
                   </Div>
@@ -142,7 +152,7 @@ export const Ticket = () => {
                           setFormData(tutor);
                           nextStep();
                         } else {
-                          toast.error("Protocolo não encontrado!");
+                          toast.error("nº de Ticket não encontrado!");
                         }
                       }}
                     >

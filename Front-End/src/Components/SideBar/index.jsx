@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { paths } from "../../constants";
+import { paths } from "../../constants/paths.js";
 import listMenu from "./listMenu";
 import {
   ContainerItems,
@@ -16,12 +16,11 @@ import {
 import { Logo } from "../Logo";
 import { useUser } from "../../Hooks/UserContext";
 
-export const SideBar = ({ path, menuOpen }) => {
+export const SideBar = ({ path }) => {
   const navigate = useNavigate();
   const { logout } = useUser();
-
   return (
-    <ContainerMenu menuOpen={menuOpen}>
+    <ContainerMenu>
       <Logo />
 
       {listMenu.map((item) => {

@@ -139,8 +139,7 @@ export const StockCharts = () => {
     const dadosPorBrinde = {};
     dados.forEach((item) => {
       const nome = item.gift.name;
-      dadosPorBrinde[nome] =
-        (dadosPorBrinde[nome] || 0) + item.packageBox.quantity;
+      dadosPorBrinde[nome] = (dadosPorBrinde[nome] || 0) + item.quantity;
     });
 
     const pie = Object.entries(dadosPorBrinde).map(([brinde, quantidade]) => ({

@@ -19,7 +19,7 @@ import {
   Label,
 } from "./styledLogin";
 import apiConnection from "../../Services/apiConnection";
-import { paths } from "../../constants";
+import { paths } from "../../constants/paths.js";
 import { schemaLogin } from "./schemaLogin.js";
 
 /*
