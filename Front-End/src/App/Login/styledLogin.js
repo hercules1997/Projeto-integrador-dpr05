@@ -138,7 +138,13 @@ export const Label = styled.label`
   text-align: start;
   font-weight: 700;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  span {
+    margin-left: 10px;
+  }
   @media (max-width: 768px) {
     font-size: 0.9rem;
   }
