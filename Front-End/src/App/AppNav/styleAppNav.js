@@ -33,7 +33,7 @@ const ContainerRigth = styled.div`
   }
 `;
 
-const ContainerItems = styled.div`
+const ContainerItems = styled.main`
   padding: 20px;
 
   @media (max-width: 768px) {

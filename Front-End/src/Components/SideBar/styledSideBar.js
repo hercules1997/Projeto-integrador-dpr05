@@ -4,7 +4,7 @@ import { colorsTheme } from "../../Styles/globalStyles";
 import { LogoutOutlined } from "@mui/icons-material";
 
 
-export const ContainerMenu = styled.div`
+export const ContainerMenu = styled.main`
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -3,7 +3,6 @@ Componente de mensagens de erros
 */
 
 import PropTypes from "prop-types";
-import React from "react";
 
 import { ErrorMessageStyles } from "./styledErrorMessage";
 
