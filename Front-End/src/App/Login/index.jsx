@@ -81,37 +81,59 @@ export function Login() {
               <h2>Sistema de Brindes - SAC</h2>
               <BlockAccess>
                 <div>
-                  <Label>
-                    <EmailIcon />
+                  <Label htmlFor="email">
+                    <EmailIcon aria-hidden="true" />
+                    <span className="sr-only">E-mail</span>
                   </Label>
                   <input
+                    id="email"
                     type="email"
                     placeholder="exemplo@adimax.com"
                     {...register("email")}
                     onKeyDown={handleKeyPress}
+                    aria-required="true"
+                    aria-invalid={!!errors.email}
+                    aria-describedby={errors.email ? "erro-email" : undefined}
                   />
+                  {errors.email && (
+                    <ErrorMessage id="erro-email" role="alert">
+                      {errors.email.message}
+                    </ErrorMessage>
+                  )}
                 </div>
-                {errors.email && (
-                  <ErrorMessage>{errors.email?.message}</ErrorMessage>
-                )}
 
                 <div>
-                  <Label>
-                    <PasswordIcon />
+                  <Label htmlFor="password">
+                    <PasswordIcon aria-hidden="true" />
+                    <span className="sr-only">Senha</span>
                   </Label>
                   <input
+                    id="password"
                     type="password"
                     placeholder="*******"
                     {...register("password")}
                     onKeyDown={handleKeyPress}
+                    aria-required="true"
+                    aria-invalid={!!errors.password}
+                    aria-describedby={
+                      capsLockWarning
+                        ? "capslock-warning"
+                        : errors.password
+                        ? "erro-senha"
+                        : undefined
+                    }
                   />
+                  {capsLockWarning && (
+                    <ErrorMessage id="capslock-warning" role="alert">
+                      Caps Lock está ativo!
+                    </ErrorMessage>
+                  )}
+                  {errors.password && (
+                    <ErrorMessage id="erro-senha" role="alert">
+                      {errors.password.message}
+                    </ErrorMessage>
+                  )}
                 </div>
-                {capsLockWarning && (
-                  <ErrorMessage>Caps Lock está ativo!</ErrorMessage>
-                )}
-                {errors.password && (
-                  <ErrorMessage>{errors.password?.message}</ErrorMessage>
-                )}
               </BlockAccess>
 
               <ButtonStyle>Entrar</ButtonStyle>

@@ -7,7 +7,7 @@ import logo from "../../assets/logo.png";
 export function Logo() {
   return (
     <ComponentLogo>
-      <img src={logo} />
+      <img src={logo} alt={"Logo da imagem da ADIMAX"}/>
     </ComponentLogo>
   );
 }
