@@ -11,7 +11,7 @@ export const All = styled.div`
   padding: 20px;
 `;
 
-export const ContainerMaster = styled.div`
+export const ContainerMaster = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@ export const ContainerMaster = styled.div`
   }
 `;
 
-export const ContainerBlock = styled.div`
+export const ContainerBlock = styled.span`
   display: flex;
   width: 100%;
   justify-content: center;
@@ -68,7 +68,7 @@ export const ButtonStyle = styled.button`
   }
 `;
 
-export const ContainerItens = styled.div`
+export const ContainerItens = styled.main`
   background-color: ${colorsTheme.light};
   border-top-left-radius: 0px;
   border-bottom-left-radius: 50px;

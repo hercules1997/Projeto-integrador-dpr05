@@ -52,7 +52,7 @@ export const History = () => {
     (page - 1) * ITEMS_PER_PAGE,
     page * ITEMS_PER_PAGE
   );
-
+  console.log(paginatedData);
   return (
     <Wrapper>
       <Navbar>
@@ -91,7 +91,7 @@ export const History = () => {
               </tr>
             ) : (
               <>
-                {paginatedData.map((history) => (
+                {paginatedData.map((history) => ( 
                   <Tr key={history._id}>
                     <Td>{history?.tutor.protocol_Id}</Td>
                     <Td>{history?.tutor.name}</Td>
@@ -100,6 +100,7 @@ export const History = () => {
                     <Td>{new Date(history.createdAt).toLocaleString()}</Td>
                     <Td>{new Date(history.createdAt).toLocaleString()}</Td>
                   </Tr>
+                  
                 ))}
               </>
             )}

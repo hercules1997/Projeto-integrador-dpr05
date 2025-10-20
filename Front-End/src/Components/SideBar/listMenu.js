@@ -31,7 +31,7 @@ const listMenu = [
   },
   {
     id: 5,
-    label: "Deshboard",
+    label: "Dashboard",
     link: paths.Deshboard,
     icon: PieChartIcon,
   },

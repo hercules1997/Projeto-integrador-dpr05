@@ -18,11 +18,11 @@ export const Container = styled.div`
   padding: 60px;
 
   @media (max-width: 1024px) {
-    padding: 40px;
+    padding: 20px;
   }
 
   @media (max-width: 768px) {
-    padding: 20px;
+    padding: 10px;
   }
 `;
 
@@ -64,7 +64,7 @@ export const SearchInput = styled.input`
   margin-top: 30px;
   margin-bottom: 30px;
   border-bottom: 1px solid ${colorsTheme.black};
-  width: 100%;
+  width: 96%;
   font-size: 1.5rem;
   border-radius: 4px;
   box-shadow: 0 0 9px rgba(0, 0, 0, 0.45);

@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   font-size: 1.5rem;
 `;
 export const Container = styled.div`
-  padding: 60px;
+  padding: 50px;
 `;
 
 export const Navbar = styled.div`
@@ -31,7 +31,7 @@ export const SearchInput = styled.input`
   outline: none;
   margin-top: 30px;
   border-bottom: 1px solid ${colorsTheme.black};
-  width: 100%;
+  width: 80%;
 
   border-radius: 4px;
   box-shadow: 0 0 9px rgba(0, 0, 0, 0.45);
