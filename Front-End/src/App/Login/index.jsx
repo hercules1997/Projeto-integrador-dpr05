@@ -17,6 +17,7 @@ import {
   ContainerBlock,
   ContainerMaster,
   Label,
+  Blockimage,
 } from "./styledLogin";
 import apiConnection from "../../Services/apiConnection";
 import { paths } from "../../constants/paths.js";
@@ -74,7 +75,10 @@ export function Login() {
   return (
     <All>
       <ContainerMaster>
-        <Logo />
+        <Blockimage>
+          <Logo />
+        </Blockimage>
+
         <ContainerBlock>
           <ContainerItens>
             <form noValidate onSubmit={handleSubmit(onSubmit)}>
@@ -135,16 +139,17 @@ export function Login() {
                   )}
                 </div>
               </BlockAccess>
-
-              <ButtonStyle>Entrar</ButtonStyle>
+              <footer>
+                <ButtonStyle>Entrar</ButtonStyle>
+              </footer>
             </form>
           </ContainerItens>
         </ContainerBlock>
       </ContainerMaster>
-      <span style={{ color: "#000000", marginTop: "25px" }}>
+      <footer style={{ color: "#000000", marginTop: "25px" }}>
         Copyright © Grupo Projeto Integrador {currentYear} - Soluções de
         desenvolvimento Software. Todos os Direitos Reservados.
-      </span>
+      </footer>
     </All>
   );
 }

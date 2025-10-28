@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { colorsTheme } from "../../Styles/globalStyles";
 
+const medida = {
+  maxWidth: 1024,
+  minWidth: 768,
+};
+
 export const All = styled.div`
   display: flex;
   align-items: center;
@@ -8,27 +13,30 @@ export const All = styled.div`
   flex-direction: column;
   height: 100vh;
   background-color: ${colorsTheme.light};
-  padding: 20px;
+
+  footer {
+    text-align: center;
+  }
 `;
 
 export const ContainerMaster = styled.section`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: ${colorsTheme.background};
   border-top-left-radius: 0px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 0px;
-  box-shadow: 0 0 19px rgb(111, 111, 111);
-  width: 400px;
+  box-shadow: 0 0 12px rgba(159, 159, 159, 1);
+  width: 60rem;
 
-  @media (max-width: 1024px) {
+  @media (max-width: ${medida.minWidth}px) {
     width: 90%;
+    flex-direction: column;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${medida.minWidth}px) {
     width: 100%;
     border-radius: 20px;
     box-shadow: none;
@@ -42,7 +50,17 @@ export const ContainerBlock = styled.span`
   align-items: center;
   text-align: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${medida.minWidth}px) {
+    flex-direction: column;
+  }
+`;
+export const Blockimage = styled.span`
+  width: 720px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: ${medida.minWidth}px) {
     flex-direction: column;
   }
 `;
@@ -50,34 +68,38 @@ export const ContainerBlock = styled.span`
 export const ButtonStyle = styled.button`
   background-color: ${colorsTheme.background};
   justify-content: center;
-  width: 100%;
+  width: 30%;
   border: none;
   align-items: center;
   text-align: center;
   font-size: 1rem;
   padding: 10px;
   border-top-left-radius: 0px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 0px;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${medida.minWidth}px) {
     font-size: 0.9rem;
     padding: 8px;
+  }
+
+  @media (max-width: ${medida.maxWidth}px) {
+    width: 100%;
   }
 `;
 
 export const ContainerItens = styled.main`
   background-color: ${colorsTheme.light};
   border-top-left-radius: 0px;
-  border-bottom-left-radius: 50px;
   border-bottom-right-radius: 0px;
   width: 100%;
   color: ${colorsTheme.black};
   padding: 30px;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${medida.minWidth}px) {
+    border-bottom-left-radius: 50px;
     border-radius: 20px;
     padding: 20px;
   }
@@ -95,9 +117,15 @@ export const ContainerItens = styled.main`
       margin-bottom: 20px;
       font-size: 1.5rem;
 
-      @media (max-width: 768px) {
+      @media (max-width: ${medida.minWidth}px) {
         font-size: 1.2rem;
       }
+    }
+
+    footer {
+      display: flex;
+      width: 100%;
+      justify-content: end;
     }
 
     div {
@@ -125,7 +153,7 @@ export const ContainerItens = styled.main`
           border-bottom: 1px solid ${colorsTheme.background};
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: ${medida.minWidth}px) {
           font-size: 1rem;
           padding: 8px;
         }
@@ -145,7 +173,7 @@ export const Label = styled.label`
   span {
     margin-left: 10px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: ${medida.minWidth}px) {
     font-size: 0.9rem;
   }
 `;
@@ -183,7 +211,7 @@ export const Input = styled.input`
     border-bottom: 1px solid ${colorsTheme.background} !important;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${medida.minWidth}px) {
     font-size: 1rem;
     padding: 12px;
   }
